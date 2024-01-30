@@ -28,3 +28,26 @@
   color: white;
   border-radius: 12px;
 }
+
+@media screen and (max-width: 900px) {
+  .slick-prev {
+    top: 0;
+    left: 10px;
+    width: auto;
+    height: auto;
+    &:before {
+      font-size: 30px;
+      line-height: 0;
+    }
+  }
+  .slick-next {
+    top: 0;
+    right: 10px;
+    width: auto;
+    height: auto;
+    &:before {
+      font-size: 30px;
+      line-height: 0;
+    }
+  }
+}

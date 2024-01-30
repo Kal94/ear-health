@@ -4,6 +4,7 @@ import Main from "../../Main";
 import Logo from "../../assets/Ear_Health.svg";
 import Button from "../../components/Button/Button";
 import Testimonials from "../../components/Testimonials/Testimonials";
+import image1 from "../../assets/1.jpg";
 
 const Home = () => {
   return (
@@ -38,19 +39,25 @@ const Home = () => {
               fully registered and regulated under the BSA, HCPC & BSHAA.
             </p>
             <h2>Why EarHealth?</h2>
-            <ul>
-              <li>
-                HD Digital Otoscopy: clearly visualise and understand your
-                diagnosis
-              </li>
-              <li>Quick, Safe and painless microsuction technology</li>
-              <li>
-                Mobile review of images by our ENT specialists who can offer
-                support, advice and guidance as required.
-              </li>
-            </ul>
+            <div className="flex">
+              <ul>
+                <li>
+                  HD Digital Otoscopy: clearly visualise and understand your
+                  diagnosis
+                </li>
+                <li>Quick, Safe and painless microsuction technology</li>
+                <li>
+                  Mobile review of images by our ENT specialists who can offer
+                  support, advice and guidance as required.
+                </li>
+              </ul>
+              <div className="image">
+                <img src={image1} />
+              </div>
+            </div>
           </div>
         </div>
+
         <Testimonials />
         <div className="services">
           <h2>Services we offer:</h2>

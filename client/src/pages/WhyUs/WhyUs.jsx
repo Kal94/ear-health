@@ -2,6 +2,11 @@ import React from "react";
 import "./WhyUs.scss";
 import Main from "../../Main";
 import Testimonials from "../../components/Testimonials/Testimonials";
+import HCPC from "../../assets/HCPC.webp";
+import AHCS from "../../assets/ahcs-logo-cropped.svg";
+import BSHAA from "../../assets/BSHAA.png";
+import image7 from "../../assets/7.jpg";
+import image5 from '../../assets/5.jpg';
 
 const WhyUs = () => {
   return (
@@ -14,17 +19,11 @@ const WhyUs = () => {
             Our Audiologists are trained to the highest standard, hold first
             class qualifications and are fully certified and regulated by:
           </p>
-          <ul>
-            <li>
-              <b>BSA</b>
-            </li>
-            <li>
-              <b>BHSAA</b>
-            </li>
-            <li>
-              <b>HCPC</b>
-            </li>
-          </ul>
+          <div className="credit-images">
+            <img src={HCPC} />
+            <img src={AHCS} />
+            <img src={BSHAA} />
+          </div>
         </div>
         <div>
           <h2>Why are we so detailed?</h2>
@@ -42,40 +41,51 @@ const WhyUs = () => {
             required.
           </p>
         </div>
-        <div>
-          <h2>Convenient Home Services:</h2>
-          <p>
-            At EarHealth, we understand that access to quality ear care should
-            be hassle-free and comfortable. That's why we're proud to offer our
-            convenient home services, designed to bring our exceptional ear care
-            directly to your doorstep. Whether it's a hearing assessment,
-            fitting for hearing aids, or follow-up care, our team of experienced
-            audiologists and hearing specialists are equipped to provide the
-            same high-quality, personalized service you'd receive in our clinic,
-            all from the comfort of your own home. This service is ideal for
-            seniors, individuals with mobility challenges, or anyone who prefers
-            the convenience of at-home medical consultations. With [Clinic
-            Name]'s home services, superior ear care is just a phone call away,
-            ensuring that your hearing health is always our top priority.
-          </p>
+        <div className="flex">
+          <div>
+            <h2>Convenient Home Services:</h2>
+            <p>
+              At EarHealth, we understand that access to quality ear care should
+              be hassle-free and comfortable. That's why we're proud to offer
+              our convenient home services, designed to bring our exceptional
+              ear care directly to your doorstep. Whether it's a hearing
+              assessment, fitting for hearing aids, or follow-up care, our team
+              of experienced audiologists and hearing specialists are equipped
+              to provide the same high-quality, personalized service you'd
+              receive in our clinic, all from the comfort of your own home. This
+              service is ideal for seniors, individuals with mobility
+              challenges, or anyone who prefers the convenience of at-home
+              medical consultations. With EarHealth's home services,
+              superior ear care is just a phone call away, ensuring that your
+              hearing health is always our top priority.
+            </p>
+          </div>
+          <div className="image">
+            <img src={image7} />
+          </div>
         </div>
-        <div>
-          <h2>Customer-Centric Approach:</h2>
-          <p>
-            At EarHealth, we place you, our valued customer, at the heart of
-            everything we do. Our approach is deeply rooted in understanding and
-            responding to your unique hearing needs and concerns. We believe
-            that every ear tells a story, and our mission is to listen
-            attentively to yours. From your first consultation to ongoing care,
-            our dedicated team ensures a compassionate, respectful, and
-            empathetic experience. We pride ourselves on creating a welcoming
-            environment where you can express your concerns freely and receive
-            tailored solutions. Our commitment to excellence is not just about
-            providing the latest treatments and technologies; it's about
-            building lasting relationships based on trust and understanding. At
-            EarHealth, your hearing journey is our journey, and we are dedicated
-            to walking alongside you every step of the way.
-          </p>
+        <div className="flex-reverse">
+          <div>
+            <h2>Customer-Centric Approach:</h2>
+            <p>
+              At EarHealth, we place you, our valued customer, at the heart of
+              everything we do. Our approach is deeply rooted in understanding
+              and responding to your unique hearing needs and concerns. We
+              believe that every ear tells a story, and our mission is to listen
+              attentively to yours. From your first consultation to ongoing
+              care, our dedicated team ensures a compassionate, respectful, and
+              empathetic experience. We pride ourselves on creating a welcoming
+              environment where you can express your concerns freely and receive
+              tailored solutions. Our commitment to excellence is not just about
+              providing the latest treatments and technologies; it's about
+              building lasting relationships based on trust and understanding.
+              At EarHealth, your hearing journey is our journey, and we are
+              dedicated to walking alongside you every step of the way.
+            </p>
+          </div>
+          <div className="image">
+            <img src={image5} />
+          </div>
         </div>
         <Testimonials />
       </div>

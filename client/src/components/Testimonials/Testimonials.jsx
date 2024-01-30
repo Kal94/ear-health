@@ -13,8 +13,8 @@ const Testimonials = () => {
       <div className="testimonials-text">
         <h2>Testimonials</h2>
         <Slider {...settings}>
-          {quotes.map((quote) => (
-            <div className="quote">
+          {quotes.map((quote, key) => (
+            <div key={key} className="quote">
               <h3>{quote}</h3>
             </div>
           ))}

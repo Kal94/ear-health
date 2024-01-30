@@ -1,14 +1,90 @@
-@import '../../colours.scss';
+@import "../../colours.scss";
 
 .services {
-    p, ol, .row-content-text {
-        font-size: 18px !important;
-        line-height: 32px !important;
+  p,
+  ol,
+  .row-content-text {
+    font-size: 18px !important;
+    line-height: 32px !important;
+  }
+  .faqs {
+    margin: 50px 0;
+  }
+  .row-title {
+    font-weight: 600;
+  }
+
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & > div {
+      width: 50%;
     }
-    .faqs {
-        margin: 50px 0;
+    .image {
+      display: flex;
+      justify-content: center;
+      img {
+        width: 100%;
+        max-width: 500px;
+      }
     }
-    .row-title {
-        font-weight: 600;
+  }
+  .flex-reverse {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-top: 50px;
+    & > div {
+      width: 50%;
     }
+
+    .image {
+      img {
+        width: 100%;
+        max-width: 500px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .services {
+    .flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & > div {
+        width: 100%;
+      }
+      .image {
+        display: flex;
+        justify-content: center;
+        img {
+          width: 100%;
+          max-width: fit-content !important;
+        }
+      }
+    }
+    .flex-reverse {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+      & > div {
+        width: 100%;
+      }
+
+      .image {
+        img {
+          width: 100%;
+          max-width: fit-content !important;
+        }
+      }
+    }
+  }
 }
