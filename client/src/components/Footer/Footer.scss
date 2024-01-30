@@ -1,0 +1,19 @@
+@import "../../colours.scss";
+
+.footer {
+  background-color: $darkBlue;
+  padding: 10px;
+  color: $white;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    a {
+      color: $white;
+      text-decoration: none;
+        cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+@import "../../colours.scss";
+
+.contact {
+  min-height: 90vh;
+  .contact-details {
+    max-width: 400px;
+    .contact-detail {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      p {
+        font-size: 18px !important;
+        line-height: 32px !important;
+      }
+      i {
+        margin-right: 15px;
+        min-width: 40px;
+      }
+    }
+  }
+
+  .form-container {
+    background-color: $aqua;
+    color: white;
+    margin: 50px 0;
+    border-radius: 12px;
+    padding: 15px 30px;
+    min-height: 500px;
+    h2 {
+      margin: 15px 0;
+    }
+    .form-input {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      input,
+      textarea {
+        border-radius: 12px;
+        border: none;
+        width: 90%;
+        padding: 2px;
+      }
+      label,
+      input,
+      textarea {
+        font-size: 18px !important;
+        line-height: 32px !important;
+        font-family: "Poppins";
+      }
+      textarea {
+        min-height: 300px;
+      }
+    }
+    .send-button {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+
+  .contact {
+    .form-container {
+      .form-input {
+        flex-direction: column;
+
+        input, textarea {
+          width: 100%;
+        }
+      }
+    }
+  }
+  
+}
