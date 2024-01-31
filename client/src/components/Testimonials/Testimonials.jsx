@@ -16,7 +16,7 @@ const Testimonials = () => {
     autoplayDuration:3000
   };
   return (
-    <div className="testimonials container" data-aos="fade-down" data-aos-duration="750" >
+    <div className="testimonials container" data-aos="fade-down" data-aos-duration="750" data-aos-delay="750" >
       <div className="testimonials-text">
         <h2>Testimonials</h2>
         <Slider {...settings}>

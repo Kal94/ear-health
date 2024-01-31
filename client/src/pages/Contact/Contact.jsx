@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Contact.scss";
 import Main from "../../Main";
 import axios from "axios";
 import Button from "../../components/Button/Button";
+import AOS from 'aos'
 
 const Contact = () => {
+  useEffect(()=> {
+    AOS.init()
+  })
   const defaultFormFields = {
     name: "",
     email: "",
@@ -49,21 +53,37 @@ const Contact = () => {
         <h1>Contact</h1>
         <h2>How to book an appointment</h2>
         <div className="contact-details">
-          <div className="contact-detail">
+          <div
+            className="contact-detail"
+            data-aos="fade-up"
+            data-aos-duration="750"
+          >
             <i className="fa-solid fa-2x fa-map-pin"></i>
             <p>123 Street, Anywhere, EC1M 2AY</p>
           </div>
-          <div className="contact-detail">
+          <div
+            className="contact-detail"
+            data-aos="fade-up"
+            data-aos-duration="750"
+            data-aos-delay="500"
+          >
             <i className="fa-solid fa-2x fa-phone"></i>
             <p>07123456789</p>
           </div>
-          <div className="contact-detail">
+          <div
+            className="contact-detail"
+            data-aos="fade-up"
+            data-aos-duration="750"
+            data-aos-delay="1000"
+          >
             <i className="fa-2x fa-regular fa-envelope"></i>
             <p>contact@earhealth.co.uk</p>
           </div>
         </div>
 
-        <div className="form-container">
+        <div className="form-container" data-aos="fade-up"
+            data-aos-duration="750"
+            data-aos-delay="1500">
           <h2>You can also use our contact form</h2>
           {!emailSent ? (
             <>
@@ -127,7 +147,10 @@ const Contact = () => {
             </>
           ) : (
             <>
-              <h2>Thank you for getting in touch, we will get back to you as soon as possible</h2>
+              <h2>
+                Thank you for getting in touch, we will get back to you as soon
+                as possible
+              </h2>
             </>
           )}
         </div>
