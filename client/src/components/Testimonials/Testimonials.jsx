@@ -1,15 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Testimonials.scss";
 import Slider from "react-slick";
 import { quotes } from "../../data";
+import AOS from 'aos'
 
 const Testimonials = () => {
+
+  useEffect(()=> {
+    AOS.init()
+  })
   const settings = {
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplayDuration:3000
   };
   return (
-    <div className="testimonials">
+    <div className="testimonials container" data-aos="fade-down" data-aos-duration="750" >
       <div className="testimonials-text">
         <h2>Testimonials</h2>
         <Slider {...settings}>

@@ -40,3 +40,10 @@
 .button:hover::after {
   opacity: 1;
 }
+
+@media screen and (max-width: 900px) {
+  .button {
+    font-size: 19px !important;
+  }
+  
+}

@@ -17,67 +17,35 @@
     font-size: 1.8rem;
     margin: 60px 0 0 0;
   }
-  .container {
-    .centered {
+
+  .centered {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 95vh;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .hero {
+      width: 100%;
       display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      height: 95vh;
-      flex-direction: column;
-      justify-content: space-around;
-
-      .hero {
-        width: 100%;
-        p {
-          font-size: 32px;
-          font-weight: 400;
-          color: $darkBlue;
-        }
-
-        a {
-          text-decoration: none;
-          color: $aqua;
-
-          &:hover {
-            text-decoration: underline;
-          }
-        }
+      justify-content: space-between;
+      align-items: flex-end;
+      img.logo {
+        max-width: 300px;
       }
-    }
-    .about-us {
-      .about-us-text {
-        p,
-        ul {
-          font-size: 20px;
-          list-style-position: outside;
-        }
-        li {
-          margin: 10px 0;
-        }
+      p {
+        font-size: 32px;
+        font-weight: 400;
+        color: $darkBlue;
       }
-    }
 
-    .services {
-      .services-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        .service {
-          background-color: $aqua;
-          color: $white;
-          padding: 7px 15px;
-          border-radius: 7px;
-          width: 47%;
-          margin-top: 15px;
+      a {
+        text-decoration: none;
+        color: $aqua;
 
-          h4 {
-            font-size: 1.3rem;
-            margin: 10px 0;
-          }
-
-          p {
-            font-size: 18px;
-          }
+        &:hover {
+          text-decoration: underline;
         }
       }
     }
@@ -157,5 +125,87 @@
 
   .services .services-container .service {
     width: 100% !important;
+  }
+  .centered {
+    height: auto !important;
+    padding: 20px 0 0 0;
+  }
+
+  .hero {
+    img {
+      width: 150px;
+    }
+    p {
+      font-size: 19px !important;
+      font-weight: 400;
+      color: $darkBlue;
+    }
+
+    a {
+      text-decoration: none;
+      color: $aqua;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .home {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(245, 246, 252, 0.52),
+      rgba(255, 255, 255, 0.9)
+    ) !important;
+  }
+}
+
+.home {
+  .about-us {
+    background-color: $blue;
+    color: $white;
+    padding: 20px;
+    .about-us-text {
+      p,
+      ul {
+        font-size: 20px;
+        list-style-position: outside;
+      }
+      li {
+        margin: 10px 0;
+      }
+    }
+  }
+
+  .services {
+    background-color: $darkBlue;
+    color: white;
+    padding: 40px 0;
+    h2 {
+      margin: 0;
+    }
+    .services-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .service {
+
+        background-color: $white;
+        color: $darkBlue;
+        padding: 7px 15px;
+        border-radius: 7px;
+        width: 47%;
+        margin-top: 15px;
+
+        h4 {
+          font-size: 1.3rem;
+          margin: 10px 0;
+        }
+
+        p {
+          font-size: 18px;
+        }
+      }
+    }
   }
 }
