@@ -52,3 +52,11 @@
     }
   }
 }
+
+@media screen and (max-width: 700px) {
+  .testimonials {
+    h3 {
+      font-size: 16px !important;
+    }
+  }
+}

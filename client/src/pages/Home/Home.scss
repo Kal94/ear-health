@@ -123,6 +123,10 @@
     }
   }
 
+  .arrow-container {
+    display: none;
+  }
+
   .services .services-container .service {
     width: 100% !important;
   }
@@ -132,6 +136,9 @@
   }
 
   .hero {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center !important;
     img {
       width: 150px;
     }
@@ -174,6 +181,12 @@
       li {
         margin: 10px 0;
       }
+
+      @media screen and (max-width: 700px) {
+        p, ul {
+          font-size: 16px !important;
+        }
+      }
     }
   }
 
@@ -189,7 +202,6 @@
       flex-wrap: wrap;
       justify-content: space-between;
       .service {
-
         background-color: $white;
         color: $darkBlue;
         padding: 7px 15px;
@@ -204,6 +216,12 @@
 
         p {
           font-size: 18px;
+        }
+
+        @media screen and (max-width:700px) {
+          p {
+            font-size: 16px !important;
+          }
         }
       }
     }
