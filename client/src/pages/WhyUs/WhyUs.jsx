@@ -41,7 +41,7 @@ const WhyUs = () => {
             src={physician}
             data-aos="fade-up"
             data-aos-duration="750"
-            data-aos-delay="1000"
+            data-aos-delay="1500"
           />
         </div>
       </div>

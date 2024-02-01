@@ -5,7 +5,7 @@ import Logo from "../../assets/Ear_Health.svg";
 import Button from "../../components/Button/Button";
 import Testimonials from "../../components/Testimonials/Testimonials";
 import image2 from "../../assets/2.jpg";
-import doctors from "../../assets/doctors.png";
+import homeImage from "../../assets/pic.png";
 import AOS from "aos";
 
 const Home = () => {
@@ -18,7 +18,6 @@ const Home = () => {
       <div className="centered container">
         <div className="hero">
           <div data-aos="fade-right" data-aos-duration="750">
-            <img className="logo" src={Logo} />
             <p>Specialist Ear care from the comfort of your own home.</p>
             <a href="contact">
               <Button text={"Book Your Appointment"} />
@@ -28,7 +27,7 @@ const Home = () => {
             </p>
           </div>
           <div data-aos="fade-left" data-aos-duration="750">
-            <img className="doctors" src={doctors} width={500} />
+            <img className="doctors" src={homeImage} />
           </div>
         </div>
         <div className="arrow-container">
@@ -73,7 +72,6 @@ const Home = () => {
             className="service"
             data-aos="fade-down"
             data-aos-duration="750"
-            data-aos-offset="100"
           >
             <h4>Home Ear Wax Removal</h4>
             <p>
@@ -86,7 +84,6 @@ const Home = () => {
             data-aos="fade-down"
             data-aos-duration="750"
             data-aos-delay="500"
-            data-aos-offset="100"
           >
             <h4>Hearing Check</h4>
             <p>
@@ -99,7 +96,6 @@ const Home = () => {
             data-aos="fade-down"
             data-aos-duration="750"
             data-aos-delay="1000"
-            data-aos-offset="100"
           >
             <h4>ENT & Audiologist Consultation</h4>
             <p>

@@ -31,7 +31,7 @@
        // Adjust as needed
       right: 10px; // Adjust as needed
       z-index: 2; // Make sure it's above other content
-      @media screen and (max-width: 700px) {
+      @media screen and (max-width: 850px) {
         display: block;
       }
     }
@@ -58,7 +58,7 @@
       }
 
       // Mobile styles
-      @media screen and (max-width: 700px) {
+      @media screen and (max-width: 850px) {
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;

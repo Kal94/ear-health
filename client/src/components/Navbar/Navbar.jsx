@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.scss";
+import Logo from "../../assets/Ear_Health.svg";
 
 const Navbar = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 850);
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 600);
+      setIsMobile(window.innerWidth < 850);
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -22,10 +23,13 @@ const Navbar = () => {
       <div className="container">
         <div className="navbar-container">
           <div className="logo">
-            <h2>EarHealth</h2>
+            <a href="/"><img src={Logo} width={250}/></a>
           </div>
           {isMobile && (
-            <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+            <button
+              className="hamburger"
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
               {menuOpen ? "✖" : "☰"}
             </button>
           )}
