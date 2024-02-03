@@ -34,7 +34,7 @@ const Contact = () => {
 
     try {
       axios
-        .post("/email", { name, phone, email, message })
+        .post("http://localhost:8000/email", { name, phone, email, message })
         .then((res) => {
           console.log(res);
           setEmailSent(true);

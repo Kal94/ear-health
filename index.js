@@ -19,15 +19,16 @@ let transporter = nodemailer.createTransport({
 });
 
 app.post('/email', (req, res) => {
+    console.log(req.body)
     // send mail with defined transport object
     let info = transporter.sendMail({
-        from: '"Ear Health" <abbastaki.at@gmail.com>', // sender address
-        to: req.body.email, // list of receivers
+        from: req.body.email, // sender address
+        to: '<abbastaki.at@gmail.com>', // list of receivers
         subject: `New Enquiry - ${req.body.name}`, // Subject line
         text: req.body.message, // plain text body
         html: `<b>${req.body.message}</b> from ${req.body.email}`, // html body
     });
-
+    console.log(info)
     return res.json()
 })
 
