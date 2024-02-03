@@ -4,11 +4,11 @@ const fs = require("fs");
 const dotenv = require('dotenv')
 const bodyParser = require('body-parser')
 const cors = require("cors");
-dotenv.config().
-app.use(cors());
 const nodemailer = require('nodemailer');
+dotenv.config()
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
+app.use(cors());
 
 let transporter = nodemailer.createTransport({
     service: 'gmail',
