@@ -1,11 +1,11 @@
 const express = require('express');
 const app = express();
 const fs = require("fs");
-const dotenv = require('dotenv').config();
+const dotenv = require('dotenv')
 const bodyParser = require('body-parser')
 const cors = require("cors");
+dotenv.config().
 app.use(cors());
-dotenv.config()
 const nodemailer = require('nodemailer');
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
