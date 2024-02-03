@@ -3,12 +3,12 @@ import "./Contact.scss";
 import Main from "../../Main";
 import axios from "axios";
 import Button from "../../components/Button/Button";
-import AOS from 'aos'
+import AOS from "aos";
 
 const Contact = () => {
-  useEffect(()=> {
-    AOS.init()
-  })
+  useEffect(() => {
+    AOS.init();
+  });
   const defaultFormFields = {
     name: "",
     email: "",
@@ -58,8 +58,10 @@ const Contact = () => {
             data-aos="fade-up"
             data-aos-duration="750"
           >
-            <i className="fa-solid fa-2x fa-map-pin"></i>
-            <p>123 Street, Anywhere, EC1M 2AY</p>
+            <i className="fa-solid fa-2x fa-phone"></i>
+            <p>
+              <a href="tel:+443332422827">+44 (0) 333 242 2827</a>
+            </p>
           </div>
           <div
             className="contact-detail"
@@ -67,23 +69,17 @@ const Contact = () => {
             data-aos-duration="750"
             data-aos-delay="500"
           >
-            <i className="fa-solid fa-2x fa-phone"></i>
-            <p>07123456789</p>
-          </div>
-          <div
-            className="contact-detail"
-            data-aos="fade-up"
-            data-aos-duration="750"
-            data-aos-delay="1000"
-          >
             <i className="fa-2x fa-regular fa-envelope"></i>
             <p>contact@earhealth.co.uk</p>
           </div>
         </div>
 
-        <div className="form-container" data-aos="fade-up"
-            data-aos-duration="750"
-            data-aos-delay="1500">
+        <div
+          className="form-container"
+          data-aos="fade-up"
+          data-aos-duration="750"
+          data-aos-delay="1500"
+        >
           <h2>You can also use our contact form</h2>
           {!emailSent ? (
             <>

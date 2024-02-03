@@ -26,7 +26,7 @@ const Home = () => {
               Contact us on <a href="tel:+443332422827">+44 (0) 333 242 2827</a>
             </p>
           </div>
-          <div data-aos="fade-left" data-aos-duration="750">
+          <div>
             <img className="doctors" src={homeImage} />
           </div>
         </div>
